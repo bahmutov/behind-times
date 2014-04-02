@@ -1,3 +1,4 @@
+require('console.table');
 var _ = require('lodash');
 var join = require('path').join;
 
@@ -25,4 +26,4 @@ function getDependencies() {
 }
 
 var deps = getDependencies();
-console.dir(deps);
+console.table(deps);

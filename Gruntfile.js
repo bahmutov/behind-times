@@ -11,10 +11,6 @@ module.exports = function (grunt) {
         jshintrc: '.jshintrc',
         reporter: require('jshint-stylish')
       }
-    },
-
-    'nice-package': {
-      all: {}
     }
   });
 

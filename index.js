@@ -13,6 +13,10 @@ function toNameVersion(dependencies) {
   return deps;
 }
 
+function clean(version) {
+  return version.replace(/[~^]/g, '');
+}
+
 function getDependencies() {
   var workingDirectory = process.cwd();
   var packageFilename = join(workingDirectory, 'package.json');
@@ -22,6 +26,10 @@ function getDependencies() {
   var devDependencies = workingPackage.devDependencies || {};
 
   var deps = toNameVersion(dependencies).concat(toNameVersion(devDependencies));
+  deps = deps.map(function (dep) {
+    dep.version = clean(dep.version);
+    return dep;
+  });
   return deps;
 }
 

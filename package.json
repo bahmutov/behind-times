@@ -3,6 +3,9 @@
   "description": "Recursive number of updates per project",
   "version": "0.0.0",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "bin": {
+    "behind-times": "./bin/behind-times.js"
+  },
   "bugs": {
     "url": "https://github.com/bahmutov/behind-times/issues"
   },

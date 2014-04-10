@@ -54,4 +54,8 @@ describe('mocking require', function () {
     expect(require('different.name')).to.be(undefined);
     module.require.restore();
   });
+
+  it('compares 1 and 2 correctly', function () {
+    expect(1).to.equal(1);
+  });
 });

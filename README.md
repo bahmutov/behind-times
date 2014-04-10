@@ -2,6 +2,12 @@
 
 > Recursively prints how many updates available for the given module and its dependencies
 
+[![NPM][behind-times-icon] ][behind-times-url]
+
+[![Build status][behind-times-ci-image] ][behind-times-ci-url]
+[![dependencies][behind-times-dependencies-image] ][behind-times-dependencies-url]
+[![devdependencies][behind-times-devdependencies-image] ][behind-times-devdependencies-url]
+
 Work in progress
 
 ### Small print
@@ -43,3 +49,12 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
+
+[behind-times-icon]: https://nodei.co/npm/behind-times.png?downloads=true
+[behind-times-url]: https://npmjs.org/package/behind-times
+[behind-times-ci-image]: https://travis-ci.org/bahmutov/behind-times.png?branch=master
+[behind-times-ci-url]: https://travis-ci.org/bahmutov/behind-times
+[behind-times-dependencies-image]: https://david-dm.org/bahmutov/behind-times.png
+[behind-times-dependencies-url]: https://david-dm.org/bahmutov/behind-times
+[behind-times-devdependencies-image]: https://david-dm.org/bahmutov/behind-times/dev-status.png
+[behind-times-devdependencies-url]: https://david-dm.org/bahmutov/behind-times#info=devDependencies

@@ -36,7 +36,7 @@
     "evil"          : false,
     "expr"          : false,
     "funcscope"     : false,
-    "globalstrict"  : false,
+    "globalstrict"  : true,
     "iterator"      : false,
     "lastsemic"     : false,
     "laxbreak"      : false,
@@ -69,5 +69,11 @@
     "passfail"      : false,
     "white"         : true,
 
-    "globals"       : {}
+    "globals"       : {
+        "describe": true,
+        "expect": true,
+        "it": true,
+        "beforeEach": true,
+        "afterEach": true
+    }
 }

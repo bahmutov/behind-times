@@ -1,7 +1,7 @@
 {
   "name": "behind-times",
   "description": "Recursive number of updates per project",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "bin": {
     "behind-times": "./bin/behind-times.js"
@@ -28,7 +28,9 @@
     "jshint-stylish": "^0.1.5",
     "matchdep": "^0.3.0",
     "pre-git": "0.0.15",
-    "time-grunt": "^0.3.1"
+    "time-grunt": "^0.3.1",
+    "sinon": "^1.9.1",
+    "mockery": "^1.4.0"
   },
   "engines": {
     "node": "> 0.8"

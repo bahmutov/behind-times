@@ -53,16 +53,12 @@ function fakeDependencies() {
   }];
 }
 
-
 function getDependencies() {
   var fake = false;
   var deps = (fake ? fakeDependencies() : loadDependencies());
   deps = cleanVersions(deps);
   return deps;
 }
-
-var deps = getDependencies();
-console.table(deps);
 
 function fetchAvailableVersions(deps) {
   var silent = true;
@@ -79,10 +75,17 @@ function fetchAvailableVersions(deps) {
   return getAvailable.reduce(q.when, q());
 }
 
-fetchAvailableVersions(deps).then(function () {
-  console.table(deps);
-  var totalVersionsBehind = _.reduce(deps, function (sum, dep) {
-    return sum + dep.behind;
-  }, 0);
-  console.log('%d versions behind', totalVersionsBehind);
-}).done();
+function behindTimes() {
+  var deps = getDependencies();
+  console.log('Fetching available versions for', deps.length, 'dependencies');
+  return fetchAvailableVersions(deps).then(function () {
+    console.table(deps);
+    var totalVersionsBehind = _.reduce(deps, function (sum, dep) {
+      return sum + dep.behind;
+    }, 0);
+    console.log('%d versions behind', totalVersionsBehind);
+    return totalVersionsBehind;
+  });
+}
+
+module.exports = behindTimes;
